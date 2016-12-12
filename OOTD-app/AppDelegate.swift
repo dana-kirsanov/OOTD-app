@@ -9,6 +9,7 @@
 
 import UIKit
 import Firebase
+import AVFoundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +19,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        var player: AVAudioPlayer?
+        
+        func playSound() {
+            let url = Bundle.main.url(forResource: "audio", withExtension: "mp3")!
+            
+            do {
+                player = try AVAudioPlayer(contentsOf: url)
+                guard let player = player else { return }
+                
+                player.prepareToPlay()
+                player.play()
+                print("PLAYED SOUND")
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+        playSound()
+        
         FIRApp.configure()
+        
+        
         return true
     }
 

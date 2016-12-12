@@ -20,12 +20,21 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+        
+        
+        
         self.postsTableView.delegate = self
         self.postsTableView.dataSource = self
         
+        //change navigation color
+        self.navigationController!.navigationBar.alpha = 0
+        self.navigationController!.navigationBar.barTintColor = UIColor(red: 245/255, green: 94/255, blue: 97/255, alpha: 1.0)
+        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        
+        
+        
         loadData()
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -35,6 +44,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     
     func loadData(){
+        
         FIRDatabase.database().reference().child("posts").observeSingleEvent(of: .value, with: { (snapshot) in
             if let postDictionary = snapshot.value as? [String: AnyObject] {
                 for post in postDictionary {
@@ -96,7 +106,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
                 } else {
                     //error
-                    print("error")
+                    print(error?.localizedDescription)
                 }
             })
         }
@@ -105,6 +115,19 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                 return cell
     }
     
+    @IBAction func logOutTapped(_ sender: Any) {
+        
+        do {
+            try FIRAuth.auth()?.signOut()
+            //success, continue with code
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC")
+            self.present(vc!, animated: true, completion: nil)
+            
+        } catch {
+            //if error:
+            print("Error signing out user")
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.

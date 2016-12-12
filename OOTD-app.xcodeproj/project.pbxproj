@@ -20,6 +20,7 @@
 		370B98591DFCEB4A001F2EF0 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370B98581DFCEB4A001F2EF0 /* PostTableViewCell.swift */; };
 		370B985B1DFCEC53001F2EF0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370B985A1DFCEC53001F2EF0 /* MainViewController.swift */; };
 		379325ED1DFE16B200E3E357 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379325EC1DFE16B200E3E357 /* SearchTableViewController.swift */; };
+		379325EF1DFE375900E3E357 /* audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 379325EE1DFE375900E3E357 /* audio.mp3 */; };
 		B64EB7D4B3A17510742D1674 /* Pods_OOTD_appTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E146239A4EBC438E8F18603 /* Pods_OOTD_appTests.framework */; };
 		C40F4CFA053B781E60B145AD /* Pods_OOTD_appUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3390A6976444B0C4C9D6A2D2 /* Pods_OOTD_appUITests.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 		370B985A1DFCEC53001F2EF0 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		379325EB1DFE055F00E3E357 /* OOTD-app.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "OOTD-app.entitlements"; sourceTree = "<group>"; };
 		379325EC1DFE16B200E3E357 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		379325EE1DFE375900E3E357 /* audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = audio.mp3; path = Assets.xcassets/audio.mp3; sourceTree = "<group>"; };
 		3FDD4229ECF0A5D0F8152EF4 /* Pods_OOTD_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OOTD_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4937A8617AD96C140243295C /* Pods-OOTD-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OOTD-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-OOTD-app/Pods-OOTD-app.release.xcconfig"; sourceTree = "<group>"; };
 		4E146239A4EBC438E8F18603 /* Pods_OOTD_appTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OOTD_appTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +127,7 @@
 		370B98251DFCB48F001F2EF0 /* OOTD-app */ = {
 			isa = PBXGroup;
 			children = (
+				379325EE1DFE375900E3E357 /* audio.mp3 */,
 				379325EB1DFE055F00E3E357 /* OOTD-app.entitlements */,
 				370B98581DFCEB4A001F2EF0 /* PostTableViewCell.swift */,
 				370B98541DFCB4EA001F2EF0 /* GoogleService-Info.plist */,
@@ -304,6 +307,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				379325EF1DFE375900E3E357 /* audio.mp3 in Resources */,
 				370B98311DFCB48F001F2EF0 /* LaunchScreen.storyboard in Resources */,
 				370B98551DFCB4EA001F2EF0 /* GoogleService-Info.plist in Resources */,
 				370B982E1DFCB48F001F2EF0 /* Assets.xcassets in Resources */,

@@ -22,6 +22,11 @@ class SearchTableViewController: UITableViewController,  UISearchResultsUpdating
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //change navigation color
+        self.navigationController!.navigationBar.alpha = 0
+        self.navigationController!.navigationBar.barTintColor = UIColor(red: 245/255, green: 94/255, blue: 97/255, alpha: 1.0)
+        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
