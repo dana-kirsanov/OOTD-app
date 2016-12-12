@@ -1,0 +1,6 @@
+framework module Pods_OOTD_appTests {
+  umbrella header "Pods-OOTD-appTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
